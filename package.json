@@ -4,8 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "nyc mocha || true",
+    "start": "node app.js",
+    "coverage": "nyc --reporter=html --reporter=text mocha npm run test"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "test"
+    ],
+    "exclude": []
   },
   "keywords": [],
   "author": "",
@@ -16,6 +24,7 @@
     "@mapbox/token-widget": "^1.0.4",
     "access-token": "^0.2.2",
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
     "cloudinary": "^1.23.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
@@ -32,20 +41,17 @@
     "init": "^0.1.2",
     "joi": "^17.2.1",
     "jquery": "^3.6.0",
+    "jsdom": "^16.5.3",
     "method-override": "^3.0.0",
+    "mocha": "^8.3.2",
     "mongoose": "^5.11.12",
-    "multer": "^1.4.2",
-    "multer-storage-cloudinary": "^4.0.0",
     "mustache": "^4.1.0",
     "npm": "^6.14.11",
+    "nyc": "^15.1.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
     "path": "^0.12.7",
-    "paypal": "^1.0.1",
-    "paypal-checkout": "^4.0.327",
-    "paypal-node-sdk": "^2.0.2",
-    "paypal-rest-sdk": "^1.8.1",
     "sanitize-html": "^2.3.3",
     "trim": "^1.0.0"
   }

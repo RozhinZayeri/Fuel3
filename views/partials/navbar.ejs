@@ -1,0 +1,26 @@
+
+<div class="container">
+<div id="first" class="d-flex text-center text-white "> 
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+				 <a style="float:left" class="navbar-brand left" href="/">
+        			Fuel
+      			</a>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                    <% if(!currentUser) { %>
+                    <a class="nav-link active" href="/login">Login</a>
+                    <a class="nav-link active" href="/register">Register</a>
+                    <% } else { %>
+                    <a class="nav-link" href="/logout">Logout</a>
+					<a class="nav-link active" aria-current="page" href="/users/<%= currentUser._id %>/edit"> Edit Profile</a>
+					<a class="nav-link active" aria-current="page" href="/quotes/new"> fuelQuote</a>
+					<a class="nav-link active" aria-current="page" href="/quotes"> fuel history</a>
+                    <% } %>
+                </nav>
+            </div>
+        </header>
+	</div>
+</div>
+	
+</div>

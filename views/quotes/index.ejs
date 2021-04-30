@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate')%>
+<div class="container">
+   
+<h1>All Quotes:</h1>
+    <% for (let quote of quotes){%>
+	<%  if( currentUser && quote.author.equals(currentUser._id))  {%>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Gallons Requested: <%= quote.gallons %> </h5>
+                    <p class="card-text">Total Amount Due: <%= quote.TotalAmountDue %></p>
+					<p class="card-text">Delivery Date: <%= quote.date %></p>
+					<p class="card-text">Delivery Address: <%= currentUser.street %></p>
+                    <p class="text-muted">Suggested Price: <%= quote.SuggestedPrice%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }%>
+</div>
+ <%}%>
+

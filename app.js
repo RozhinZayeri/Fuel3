@@ -20,7 +20,6 @@ const quoteRoutes = require('./routes/quotes');
 const session = require('express-session');
 const MongoDBStore = require("connect-mongo")(session);
 
-const dbUrl = 'mongodb+srv://buckle:BbNKZBtXkIH7FKa0@cluster0.ufnzz.mongodb.net/fuel15?retryWrites=true&w=majority'
 
 // const dbUrl = process.env.DB_URL;
 
